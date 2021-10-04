@@ -51,4 +51,10 @@ public class TileScript : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.red;
     }
+
+    public void SetPosition(int localX, int localY)
+    {
+        x = localX;
+        y = localY;
+    }
 }

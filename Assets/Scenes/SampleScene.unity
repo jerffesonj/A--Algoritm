@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 1.5, z: -10}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -326,7 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1721288b1a6764f8f339542889140f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 1936073691153197179, guid: 5e47a70534af5514085f7dc6334f7e3b, type: 3}
+  tilePrefab: {fileID: 1936073691153197179, guid: 5e47a70534af5514085f7dc6334f7e3b,
+    type: 3}
   numLinhas: 10
   numColunas: 10
 --- !u!4 &1014797500

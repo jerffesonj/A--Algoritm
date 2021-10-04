@@ -41,7 +41,7 @@ public class BoardController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            StartCoroutine(CheckCasinha());
+            CheckCasinha();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -50,7 +50,7 @@ public class BoardController : MonoBehaviour
 
     }
 
-    IEnumerator CheckCasinha()
+    void CheckCasinha()
     {
         listaAberta.Add(board.tabuleiro[startX, startY]);
 
@@ -97,7 +97,7 @@ public class BoardController : MonoBehaviour
             {
                 //if (listaAberta[j] != board.tabuleiro[startX, startY])
                 {
-                    if (listaAberta[j].GetComponent<TileScript>().fCost < menorValor)
+                    if (listaAberta[j].GetComponent<TileScript>().fCost <= menorValor)
                     {
                         menorValor = listaAberta[j].GetComponent<TileScript>().fCost;
                         proxTile = listaAberta[j];
@@ -197,8 +197,6 @@ public class BoardController : MonoBehaviour
             print(ultimoTile.GetComponent<TileScript>().x + "    " + ultimoTile.GetComponent<TileScript>().y);
             listaFechada.Add(proxTile);
             proxTile.GetComponent<TileScript>().CheckedTile();
-
-            yield return null;
         }
 
 
